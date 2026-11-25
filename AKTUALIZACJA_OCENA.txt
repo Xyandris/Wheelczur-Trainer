@@ -1,0 +1,34 @@
+AKTUALIZACJA WHEELCZURA: OCENA NOWEGO MP4
+
+1. Zamknij launcher.
+2. Rozpakuj ZAWARTOSC tej paczki do swojego obecnego folderu Wheelczura,
+   tego, w ktorym masz launcher.py. Zgodz sie na zastapienie plikow kodu.
+   Przyklad: plik launcher.py z paczki ma zastapic Twoj launcher.py,
+   a nowe pliki canine_limb/... maja trafic do Twojego canine_limb/.
+3. Twoj folder model/ zostaje obok launchera. Paczka nie zawiera modeli,
+   nie nadpisuje treningu ani srodowiska .venv-cpu/.venv-cuda.
+   Nie musisz niczego trenowac ponownie ani doinstalowywac.
+4. Uruchom: python launcher.py
+5. Wybierz 11 (CPU) lub 12 (tracker NVIDIA CUDA).
+6. Wybierz model_Vxxx; Enter wybiera najnowsza kompletna wersje.
+7. Podaj sciezke do MP4, najlepiej filmu spoza zbioru treningowego.
+8. Zobaczysz procenty zdrowy/chory osobno dla front i hind.
+   Przy filmie powstanie folder <film>_ocena/ z raport.html i wynikami CSV/JSON.
+
+JESLI PRZENOSISZ SIE DO INNEGO FOLDERU PROJEKTU
+
+- Skopiuj caly dotychczasowy model/ do model/ obok nowego launcher.py.
+- Skopiuj pliki rtmpose_ap10k.onnx i yolox_tiny.onnx z canine_limb/models/
+  do canine_limb/models/ nowego projektu (albo pobierz je opcja 7).
+- Srodowisko w nowym folderze utworz przez --setup cpu lub --setup cuda.
+  Nie przenos samego venv miedzy sciezkami.
+- Zachowaj wersje scikit-learn z treningu (versions.sklearn w metadata.json).
+  Program podaje dokladna wersje, jezeli jest niezgodnosc.
+- Filmy treningowe i ich CSV nie sa potrzebne do oceny nowego filmu.
+
+W kazdym model/model_Vxxx/ musza byc razem:
+front_model.joblib, hind_model.joblib oraz metadata.json.
+
+Procenty sa wynikami klasyfikatorow, nie potwierdzonym
+prawdopodobienstwem choroby. Raport pokazuje osobno walidacje modelu,
+jesli byla dostepna. Szczegoly i polecenia bez menu: README.md, sekcja 5.

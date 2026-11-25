@@ -13,3 +13,4 @@ dist/
 .venv
 .venv-cpu
 .venv-cuda
+/model/
