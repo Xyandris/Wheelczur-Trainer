@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+*_tracking/
+/canine_limb/models/yolox_tiny.onnx
+/canine_limb/models/rtmpose_ap10k.onnx
+.idea/
+.venv*/
+.venv
+.venv-cpu
+.venv-cuda
