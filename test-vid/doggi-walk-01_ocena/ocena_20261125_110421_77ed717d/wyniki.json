@@ -1,0 +1,97 @@
+{
+  "program_version": "1.1.0",
+  "created_utc": "2026-11-25T10:04:21.321403+00:00",
+  "input_video": "C:\\Users\\Kuba\\Desktop\\Wheelczur-main\\test-vid\\doggi-walk-01.mp4",
+  "model_version": "model_V001",
+  "model_directory": "C:\\Users\\Kuba\\Desktop\\Wheelczur-main\\model\\model_V001",
+  "models": {
+    "front": {
+      "which_limb": "front",
+      "prediction": "zdrowy",
+      "confidence": 0.9933333333333333,
+      "scores": {
+        "chory": 0.006666666666666667,
+        "zdrowy": 0.9933333333333333
+      },
+      "windows": 1,
+      "valid_frames": 114,
+      "coverage": 1.0,
+      "validation": {
+        "status": "not_available",
+        "reason": "Za mało niezależnych grup do walidacji; model wytrenowano bez oceny skuteczności."
+      }
+    },
+    "hind": {
+      "which_limb": "hind",
+      "prediction": "zdrowy",
+      "confidence": 0.98,
+      "scores": {
+        "chory": 0.02,
+        "zdrowy": 0.98
+      },
+      "windows": 1,
+      "valid_frames": 114,
+      "coverage": 1.0,
+      "validation": {
+        "status": "not_available",
+        "reason": "Za mało niezależnych grup do walidacji; model wytrenowano bez oceny skuteczności."
+      }
+    }
+  },
+  "agreement": "Oba modele wskazują: ZDROWY.",
+  "score_note": "Procenty są wynikami klasyfikatorów, a nie potwierdzonym prawdopodobieństwem choroby. Skuteczność modelu sprawdź w wynikach walidacji na osobnych nagraniach.",
+  "score_aggregation": "mean class scores across valid temporal windows, independently per limb",
+  "model_sha256": {
+    "front": "b7be06136d133e9938c1b39074ca1fdb57b0a166c3bc0eab92747fa72a04db29",
+    "hind": "6e063daf2d949e9d2339c140cefbad0b759d5fd4c78bf6b59c233129587e8469"
+  },
+  "tracking": {
+    "fps": 60.0,
+    "frames": 114,
+    "source_size": [
+      1920,
+      1080
+    ],
+    "direction": 1,
+    "direction_counts": {
+      "1": 114
+    },
+    "flipped": false,
+    "source_camera_side": "right",
+    "normalized_camera_side": "right",
+    "normalized_direction": "right",
+    "canvas_size": [
+      640,
+      640
+    ],
+    "dog_longest_bbox_side_px": 480.0,
+    "coordinate_system": "normalized pixels; origin top-left; x right, y down",
+    "near_side_policy": "side-view geometry, fixed right AP-10K limbs after mirroring; no far-side fallback",
+    "valid_frames": {
+      "front": 114,
+      "hind": 114
+    },
+    "frame_status_counts": {
+      "detected": 114
+    },
+    "outputs": {
+      "normalized": "normalized.mp4",
+      "overlay": "tracking.mp4",
+      "front": "front.csv",
+      "hind": "hind.csv"
+    }
+  },
+  "device": "cpu",
+  "runtime_versions": {
+    "sklearn": "1.9.1",
+    "numpy": "2.5.5"
+  },
+  "processing_seconds": 16.829,
+  "outputs": {
+    "report": "raport.html",
+    "json": "wyniki.json",
+    "csv": "wyniki.csv",
+    "window_csv": "wyniki_okien.csv",
+    "video": "tracking/tracking.mp4"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "fps": 60.0,
+  "frames": 114,
+  "source_size": [
+    1920,
+    1080
+  ],
+  "direction": 1,
+  "direction_counts": {
+    "1": 114
+  },
+  "flipped": false,
+  "source_camera_side": "right",
+  "normalized_camera_side": "right",
+  "normalized_direction": "right",
+  "canvas_size": [
+    640,
+    640
+  ],
+  "dog_longest_bbox_side_px": 480.0,
+  "coordinate_system": "normalized pixels; origin top-left; x right, y down",
+  "near_side_policy": "side-view geometry, fixed right AP-10K limbs after mirroring; no far-side fallback",
+  "valid_frames": {
+    "front": 114,
+    "hind": 114
+  },
+  "frame_status_counts": {
+    "detected": 114
+  },
+  "outputs": {
+    "normalized": "normalized.mp4",
+    "overlay": "tracking.mp4",
+    "front": "front.csv",
+    "hind": "hind.csv"
+  }
+}
