@@ -1,0 +1,140 @@
+{
+  "program_version": "1.1.0",
+  "created_utc": "2026-11-25T09:45:55.589013+00:00",
+  "task": "healthy_vs_affected_gait",
+  "algorithm": "RandomForestClassifier",
+  "which_limb": [
+    "front",
+    "hind"
+  ],
+  "labels": [
+    "zdrowy",
+    "chory"
+  ],
+  "config": {
+    "dataset": "C:\\Users\\Kuba\\Desktop\\Wheelczur-main\\dane_treningowe",
+    "output_root": "C:\\Users\\Kuba\\Desktop\\Wheelczur-main\\model",
+    "device": "cpu",
+    "models_dir": null,
+    "confidence": 0.3,
+    "detector_confidence": 0.3,
+    "window_seconds": 2.0,
+    "stride_seconds": 1.0,
+    "min_valid_frames": 20,
+    "min_coverage": 0.5,
+    "trees": 300,
+    "seed": 42
+  },
+  "accepted_videos": 4,
+  "skipped_videos": 1,
+  "class_video_counts": {
+    "zdrowy": 3,
+    "chory": 1
+  },
+  "feature_version": 1,
+  "feature_names": [
+    "mid_x_mean",
+    "mid_x_std",
+    "mid_x_p10",
+    "mid_x_p90",
+    "mid_y_mean",
+    "mid_y_std",
+    "mid_y_p10",
+    "mid_y_p90",
+    "paw_x_mean",
+    "paw_x_std",
+    "paw_x_p10",
+    "paw_x_p90",
+    "paw_y_mean",
+    "paw_y_std",
+    "paw_y_p10",
+    "paw_y_p90",
+    "joint_angle_mean",
+    "joint_angle_std",
+    "joint_angle_p10",
+    "joint_angle_p90",
+    "extension_mean",
+    "extension_std",
+    "extension_p10",
+    "extension_p90",
+    "upper_length_mean",
+    "upper_length_std",
+    "upper_length_p10",
+    "upper_length_p90",
+    "lower_length_mean",
+    "lower_length_std",
+    "lower_length_p10",
+    "lower_length_p90",
+    "paw_x_velocity_mean",
+    "paw_x_velocity_std",
+    "paw_x_velocity_p10",
+    "paw_x_velocity_p90",
+    "paw_y_velocity_mean",
+    "paw_y_velocity_std",
+    "paw_y_velocity_p10",
+    "paw_y_velocity_p90",
+    "joint_angle_velocity_mean",
+    "joint_angle_velocity_std",
+    "joint_angle_velocity_p10",
+    "joint_angle_velocity_p90",
+    "paw_frequency_hz",
+    "paw_periodicity"
+  ],
+  "feature_config": {
+    "window_seconds": 2.0,
+    "stride_seconds": 1.0,
+    "sample_rate": 30,
+    "min_valid_frames": 20,
+    "min_coverage": 0.5
+  },
+  "validation": {
+    "front": {
+      "status": "not_available",
+      "reason": "Za mało niezależnych grup do walidacji; model wytrenowano bez oceny skuteczności."
+    },
+    "hind": {
+      "status": "not_available",
+      "reason": "Za mało niezależnych grup do walidacji; model wytrenowano bez oceny skuteczności."
+    }
+  },
+  "validation_test_groups": [],
+  "validation_train_groups": [
+    "video:chory/dog.mp4",
+    "video:zdrowy/kundi -fast walk.mp4",
+    "video:zdrowy/owi-walk.mp4",
+    "video:zdrowy/vecteezy_desert-canid-running-in-dry-landscape-under-sunlight_72830727.mp4"
+  ],
+  "saved_model_training": "all accepted videos; evaluation used separate temporary models",
+  "normalization": {
+    "direction": "right",
+    "canvas_size": 640,
+    "dog_bbox_longest_side": 480.0
+  },
+  "tracker_model_sha256": {
+    "rtmpose_ap10k.onnx": "1cfd1c86e0d9e5d5f95178bcd95ee9a4e8386a624cd3c57519f27ff58cac7f28",
+    "yolox_tiny.onnx": "427cc366d34e27ff7a03e2899b5e3671425c262ea2291f88bb942bc1cc70b0f7"
+  },
+  "pose_runtime": {
+    "device": "cpu",
+    "opencv": "4.11.0",
+    "cuda_verified": false,
+    "providers": [
+      "OpenCV_CPU"
+    ]
+  },
+  "detector_runtime": {
+    "device": "cpu",
+    "opencv": "4.11.0",
+    "cuda_verified": false,
+    "providers": [
+      "OpenCV_CPU"
+    ]
+  },
+  "versions": {
+    "numpy": "2.5.5",
+    "sklearn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "processing_seconds": 141.031,
+  "model_version": "model_V001"
+}

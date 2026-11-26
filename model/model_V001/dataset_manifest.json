@@ -1,0 +1,58 @@
+{
+  "accepted": [
+    {
+      "source_id": "zdrowy/kundi -fast walk.mp4",
+      "group_id": "video:zdrowy/kundi -fast walk.mp4",
+      "label": "zdrowy",
+      "clip_id": "2e30ed5776a85201",
+      "output_dir": "data/zdrowy/2e30ed5776a85201",
+      "frames": 147,
+      "valid_frames": {
+        "front": 147,
+        "hind": 147
+      }
+    },
+    {
+      "source_id": "zdrowy/owi-walk.mp4",
+      "group_id": "video:zdrowy/owi-walk.mp4",
+      "label": "zdrowy",
+      "clip_id": "269de12acd350c32",
+      "output_dir": "data/zdrowy/269de12acd350c32",
+      "frames": 121,
+      "valid_frames": {
+        "front": 121,
+        "hind": 121
+      }
+    },
+    {
+      "source_id": "zdrowy/vecteezy_desert-canid-running-in-dry-landscape-under-sunlight_72830727.mp4",
+      "group_id": "video:zdrowy/vecteezy_desert-canid-running-in-dry-landscape-under-sunlight_72830727.mp4",
+      "label": "zdrowy",
+      "clip_id": "816d9bf53ce21cb5",
+      "output_dir": "data/zdrowy/816d9bf53ce21cb5",
+      "frames": 480,
+      "valid_frames": {
+        "front": 480,
+        "hind": 480
+      }
+    },
+    {
+      "source_id": "chory/dog.mp4",
+      "group_id": "video:chory/dog.mp4",
+      "label": "chory",
+      "clip_id": "6d494036251ff18a",
+      "output_dir": "data/chory/6d494036251ff18a",
+      "frames": 151,
+      "valid_frames": {
+        "front": 151,
+        "hind": 151
+      }
+    }
+  ],
+  "skipped": [
+    {
+      "source_id": "zdrowy/szpi-walk.mp4",
+      "reason": "Za mało pewnych klatek front: 29/96. Potrzebny jest wyraźny widok obu kończyn od strony kamery."
+    }
+  ]
+}
